@@ -4,7 +4,6 @@ import { SharedModule } from '@shared/shared.module';
 import { EnvSchema } from './env.schema';
 import { resolve } from 'path';
 
-
 @Module({
     imports: [
         SharedModule,
