@@ -4,5 +4,33 @@
   "sourceRoot": "src",
   "compilerOptions": {
     "deleteOutDir": true
+  },
+  "monorepo": true,
+  "projects": {
+    "main": {
+      "type": "application",
+      "root": "app",
+      "sourceRoot": "app",
+      "entryFile": "main",
+      "compilerOptions": {
+        "tsConfigPath": "app/main/tsconfig.app.json",
+        "assets": [
+          {
+            "watchAssets": true,
+            "include": "**/.env.*",
+            "outDir": "dist/app/main"
+          }
+        ]
+      }
+    },
+    "shared": {
+      "type": "library",
+      "root": "lib",
+      "entryFile": "index",
+      "sourceRoot": "lib/src",
+      "compilerOptions": {
+        "tsConfigPath": "lib/tsconfig.lib.json"
+      }
+    }
   }
 }
