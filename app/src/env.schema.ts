@@ -6,7 +6,6 @@ import * as Joi from 'joi';
 export const EnvSchema = Joi.object({
     APP_PORT: Joi.number().port(),
     APP_GLOBAL_PREFIX: Joi.string(),
-    APP_STATIC_PREFIX: Joi.string(),
     SWAGGER_TITLE: Joi.string(),
     SWAGGER_PATH: Joi.string(),
 })

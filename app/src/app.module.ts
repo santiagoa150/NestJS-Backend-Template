@@ -1,7 +1,9 @@
 import { Module } from '@nestjs/common';
-import { SharedModule } from '@shared/shared.module';
 import { ConfigModule } from '@nestjs/config';
-import { EnvSchema } from '../../env.schema';
+import { SharedModule } from '@shared/shared.module';
+import { EnvSchema } from './env.schema';
+import { resolve } from 'path';
+
 
 @Module({
     imports: [
@@ -9,6 +11,7 @@ import { EnvSchema } from '../../env.schema';
         ConfigModule.forRoot({
             isGlobal: true,
             validationSchema: EnvSchema,
+            envFilePath: resolve(process.cwd(), 'app/src/.env'),
         }),
     ],
     controllers: [],

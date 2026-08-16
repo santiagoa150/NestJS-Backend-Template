@@ -10,14 +10,14 @@
     "main": {
       "type": "application",
       "root": "app",
-      "sourceRoot": "app",
+      "sourceRoot": "app/src",
       "entryFile": "main",
       "compilerOptions": {
-        "tsConfigPath": "./src/app/tsconfig.app.json",
+        "tsConfigPath": "./app/tsconfig.app.json",
         "assets": [
           {
             "watchAssets": true,
-            "include": "**/.env.*",
+            "include": "**/.env*",
             "outDir": "dist/app"
           }
         ]
@@ -25,11 +25,11 @@
     },
     "shared": {
       "type": "library",
-      "root": "lib",
+      "root": "libs/shared",
       "entryFile": "index",
-      "sourceRoot": "lib",
+      "sourceRoot": "libs/shared/src",
       "compilerOptions": {
-        "tsConfigPath": "./src/lib/tsconfig.lib.json"
+        "tsConfigPath": "./libs/shared/tsconfig.lib.json"
       }
     }
   }
