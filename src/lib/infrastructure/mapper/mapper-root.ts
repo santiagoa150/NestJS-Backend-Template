@@ -4,7 +4,6 @@
  * @template M - The DTO (data transfer object) type.
  */
 export abstract class MapperRoot<D, M> {
-
     /**
      * Creates a domain entity from a DTO.
      * @param dto - The DTO to convert.

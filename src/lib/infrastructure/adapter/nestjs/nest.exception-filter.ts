@@ -61,7 +61,7 @@ export class NestExceptionFilter implements ExceptionFilter {
      */
     catch(exception: Error, host: ArgumentsHost) {
         this._logger.error(JSON.stringify(exception));
-        let response = new ExceptionResponse();
+        const response = new ExceptionResponse();
         response.timestamp = new Date().toISOString();
         if (exception instanceof Exception) {
             response.message = exception.message;
