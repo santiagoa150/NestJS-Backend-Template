@@ -13,12 +13,12 @@
       "sourceRoot": "app",
       "entryFile": "main",
       "compilerOptions": {
-        "tsConfigPath": "app/main/tsconfig.app.json",
+        "tsConfigPath": "./src/app/tsconfig.app.json",
         "assets": [
           {
             "watchAssets": true,
             "include": "**/.env.*",
-            "outDir": "dist/app/main"
+            "outDir": "dist/app"
           }
         ]
       }
@@ -27,9 +27,9 @@
       "type": "library",
       "root": "lib",
       "entryFile": "index",
-      "sourceRoot": "lib/src",
+      "sourceRoot": "lib",
       "compilerOptions": {
-        "tsConfigPath": "lib/tsconfig.lib.json"
+        "tsConfigPath": "./src/lib/tsconfig.lib.json"
       }
     }
   }
